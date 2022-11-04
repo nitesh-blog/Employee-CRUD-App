@@ -1,6 +1,9 @@
-"# Employee-CRUD-App" 
+# Employee-CRUD-App
+
 This folder contains a Employee-Management-System.
+
 I have used:
+
 1.EJS
 2. CSS 
 3. Node JS

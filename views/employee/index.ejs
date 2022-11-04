@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Employee List</title>
+    <style>
+      body {
+    padding: 30px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    color: #555555;
+  }
+  
+  a {
+    color: #00B7FF;
+  }
+  
+  .container {
+    padding: 20px;
+    background-color: #efefef;
+    width: 400px;
+    border-radius: 6px;
+  }
+  .container h3 a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #00AE4D;
+    border-radius: 6px;
+    color: #FFFFFF;
+  }
+  
+  .container h3 a:hover, .container table tr td button:hover {
+    background-color: #78F5AE;
+    color: #999999;
+  }
+  
+  .container table {
+    width: 360px;
+  }
+  
+  .container table tr td {
+    padding: 5px;
+  }
+  
+  .container table tr td input, .container table tr td textarea {
+    border: solid 1px #dddddd;
+    padding: 5px 10px;
+    border-radius: 6px;
+    width: 100%;
+    color: #777777;
+  }
+  
+  .container table tr td button {
+    border: solid 1px #AABF5C;
+    background-color: #00AE4D;
+    border-radius: 6px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 10px 0;
+    padding: 10px 20px;
+  }
+  
+  .container form button {
+    border: solid 1px #CB2027;
+    background-color: #DD4B39;
+    border-radius: 6px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 10px 0;
+    padding: 10px 20px;
+  }
+  
+  .container .list-table {
+    width: 360px;
+    border: solid 2px #DDDDDD;
+    border-spacing: 0;
+  }
+  
+  .container .list-table th {
+    border-bottom: solid 2px #DDDDDD;
+  }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/employee/create">Create Employee</a></h3>
+      <h1>Employee List</h1>
+      <% if(employee.length>0) { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Employee Name</th>
+            <th>Position</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(var i=0; i<employee.length;i++) { %>
+            <tr>
+              <td><a href="/employee/show/<%= employee[i]._id%>"><%= employee[i].name%></a></td>
+              <td><%= employee[i].position%></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>No employees found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>
+
+<p></p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Employee Detail</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/employee">Employee List</a></h3>
+      <h1>Employee Detail</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td><%= employee.name %></td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>:</td>
+            <td><%= employee.address %></td>
+          </tr>
+          <tr>
+            <td>Position</td>
+            <td>:</td>
+            <td><%= employee.position %></td>
+          </tr>
+          <tr>
+            <td>Salary</td>
+            <td>:</td>
+            <td>$<%= employee.salary %>/year</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a href="/employee/edit/<%= employee._id%>">EDIT</a></h3>
+      <form action="/employee/delete/<%= employee._id%>" method="post">
+        <button type="submit">DELETE</button>
+      </form>
+    </div>
+  </body>
+</html>

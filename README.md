@@ -16,19 +16,19 @@ You can run this project use command : npm start
 Given below is the snap shot of the home page.
 
 
-First Page :
+First Page : Create Employee
 
 ![Employee_Create](https://user-images.githubusercontent.com/64421386/200011531-cee89de5-0626-40e0-b7bb-4bb6cd6cb8ab.PNG)
 
-Second Page :
+Second Page : Show Employee Details
 
 ![Employee_Details](https://user-images.githubusercontent.com/64421386/200011641-a1553eca-0ee1-4a31-8af2-e6e8c8d1d13b.PNG)
 
-Third Page :
+Third Page : Edit Employee
 
 ![Employee_Update](https://user-images.githubusercontent.com/64421386/200011724-e540ba0f-9306-40b5-9b21-3af95e18bc6b.PNG)
 
-Fourth Page :
+Fourth Page : Show Employees List
 
 ![EmployeeList](https://user-images.githubusercontent.com/64421386/200011795-411ccf74-9eaf-4777-bf1e-aa0091f81016.PNG)
 

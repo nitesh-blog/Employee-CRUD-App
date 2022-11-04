@@ -2,9 +2,9 @@
 
 This folder contains a Employee-Management-System.
 
-I have used:
+I have used technologies:
 
-1.EJS
+1. EJS
 2. CSS 
 3. Node JS
 4. Express
